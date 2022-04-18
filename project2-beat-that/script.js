@@ -49,20 +49,17 @@ var main = function (input) {
     allPlayersTotal[0] = player1_total;
   }
 
-  //compare results (look into this)
   if (player2_score === 0) {
-    return `Player1 rolled ${player1_score}. Player2. please click the submit button to roll your dices.`;
+    return `Player1 rolled ${player1_score}. Player2. please click the roll your dice button to roll your dices.`;
   } else if (player1_score < player2_score) {
     player2 = player2_score;
     //resets the round
     player2_score = 0;
-    console.log(player2);
     return `Player2 wins! You rolled ${player2} while Player1 rolled ${player1_score}. Your current total score is: ${allPlayersTotal[1]}`;
   } else {
     player2 = player2_score;
     //resets the round
     player2_score = 0;
-    console.log(player2);
     return `Player1 wins! You rolled ${player1_score} while Player2 rolled ${player2}. Your current total score is: ${allPlayersTotal[0]}`;
   }
 };
