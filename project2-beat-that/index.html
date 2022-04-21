@@ -64,13 +64,17 @@ The <html> element is known as the root element of a HTML page. All other elemen
     <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
     <div class="container">
       <!-- The <p> tag defines a paragraph element. -->
-      <p>Input:</p>
-      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
-      <input id="input-field" />
+      <p>1. There are 2 players and players take turns.</p>
+      <p>2. When a player clicks Submit, the game rolls 2 die.</p>
+      <p>
+        3. The result from each dice will be used to make a highest possible
+        2-digit number. For example, '1' and '2' will be combined to '21'.
+      </p>
+      <p>4. The player with the higher combined number wins.</p>
       <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
       <br />
       <!-- The <button> tag represents.. you guessed it! a button. -->
-      <button id="submit-button">Submit</button>
+      <button id="submit-button">Roll your Dice</button>
       <p>Output:</p>
       <div class="output-div" id="output-div"></div>
     </div>
@@ -88,7 +92,7 @@ The <html> element is known as the root element of a HTML page. All other elemen
         // Set result to input value
         var input = document.querySelector("#input-field");
         // Store the output of main() in a new variable
-        var result = main(input.value);
+        var result = main();
 
         // Display result in output element
         var output = document.querySelector("#output-div");
